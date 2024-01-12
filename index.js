@@ -1,4 +1,4 @@
-const { onRequest } = require("firebase-functions/v2/https");
+// const { onRequest } = require("firebase-functions/v2/https");
 // const logger = require("firebase-functions/logger");
 const express = require("express");
 const cors = require("cors");
@@ -33,5 +33,5 @@ app.post("/payment/create", async (req, res) => {
     });
   }
 });
-
-exports.api = onRequest(app);
+app.listen(4050, console.log("Amazon Server Running ..."));
+// exports.api = onRequest(app);
